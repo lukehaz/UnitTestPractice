@@ -27,6 +27,12 @@ TEST(PasswordTest, single_letter_password)
 
 TEST(PasswordTest, mixed_case_password){
 	Password my_password;
-	bool comp = my_password.has_mixed_case;
-	ASSERT_EQ(True,comp);
+	bool comp = my_password.has_mixed_case("HeLLo");
+	ASSERT_EQ(true,comp);
+}
+
+TEST(PasswordTest, is_password_null){
+	Password my_password;
+	bool flag = my_password.has_null("/n");
+	ASSERT_EQ(true,flag);
 }

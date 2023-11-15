@@ -35,3 +35,15 @@ bool Password::has_mixed_case(string phrase){
 
         return has_upper && has_lower;
     }
+
+
+bool Password::has_null(string phrase){
+  
+  for (char c : phrase) {
+    if(c == NULL){
+      return true;
+    }
+  }
+  return false;
+}
+
